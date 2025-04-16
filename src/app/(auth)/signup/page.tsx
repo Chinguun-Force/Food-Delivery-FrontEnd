@@ -21,11 +21,13 @@ import { LoginType } from "../login/page";
 
 export type ErrorType = {
   response: {
-    data: {
-      error: string;
-    };
+      data: {
+          error: string;
+      };
   };
+  message: string;
 };
+
 
 const Register = () => {
   const router = useRouter();
@@ -46,7 +48,7 @@ const Register = () => {
 
   const onSubmit = async (val: LoginType) => {
     try {
-      const user = await axios.post(`${BASE_URL}/auth/register`, val);
+      const user = await axios.post(`${BASE_URL}/auth/sign-up`, val);
 
       if (user) {
         toast("User successfully register.");
