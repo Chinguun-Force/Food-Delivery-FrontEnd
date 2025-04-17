@@ -69,7 +69,6 @@ const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
             } else {
                 router.push('/')
             }
-
         } catch (error: unknown) {
             console.log(error, "error")
             // setError((error as ErrorType).response.data.error);
