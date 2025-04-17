@@ -9,6 +9,7 @@ import FoodModal from "./FoodModal";
 type FoodType = {
   _id: string;
   name: string;
+  Name : string;
   price: number;
   image: string;
   ingredients: string[];
@@ -16,7 +17,7 @@ type FoodType = {
 
 type CategoryType = {
   _id: string;
-  name: string;
+  categoryName: string;
   foods: FoodType[];
   createdAt: string;
   updatedAt: string;
@@ -33,12 +34,13 @@ const FoodList = () => {
     });
 
     const { categories } = await response.json();
-
+    console.log(categories);
     setCategories(categories);
   };
 
   useEffect(() => {
     getFoods();
+    // console.log(categories)
   }, []);
 
   return (
@@ -46,7 +48,7 @@ const FoodList = () => {
       {categories.map((category: CategoryType) => {
         return (
           <div key={category._id}>
-            <p className="font-bold mt-4">{category.name}</p>
+            <p className="font-bold mt-4">{category.categoryName}</p>
             <div className="grid grid-cols-3 gap-4 mt-4">
               {category.foods.map((food) => (
                 <Card
@@ -66,7 +68,7 @@ const FoodList = () => {
                     <FoodModal food={food} />
                   </div>
                   <div className="flex justify-between">
-                    <p>{food.name}</p>
+                    <p>{food.Name}</p>
                     <p>{food.price}</p>
                   </div>
                   <p>{food.ingredients.map((i) => i)}</p>

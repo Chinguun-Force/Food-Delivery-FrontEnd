@@ -71,8 +71,8 @@ const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
             }
         } catch (error: unknown) {
             console.log(error, "error")
-            // setError((error as ErrorType).response.data.error);
-            setError((error as ErrorType).message);
+            setError((error as ErrorType).response.data.error);
+            // setError((error as ErrorType).error);
         }
     }
 

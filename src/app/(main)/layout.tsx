@@ -9,7 +9,7 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section>
+    <section className="">
       <CartProvider>
         <Header />
         {children}
