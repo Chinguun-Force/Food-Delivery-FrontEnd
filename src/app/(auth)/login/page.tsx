@@ -40,17 +40,15 @@ const Login = () => {
         },
     });
 
-    const onSubmit = async (value: LoginType) => {
-        login(value);
-       
+    const test =  () =>{
+      console.log("tttt")
     }
-
     return (
         <div>
             <h1>Log in</h1>
             <div>
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                    <form onSubmit={form.handleSubmit(login)} className="space-y-8">
                         <FormField
                             control={form.control}
                             name="email"
