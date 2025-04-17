@@ -40,9 +40,11 @@ const Login = () => {
         },
     });
 
-    const test =  () =>{
-      console.log("tttt")
-    }
+    // const onSubmit = async (value: LoginType) => {
+    //     login(value);
+       
+    // }
+
     return (
         <div>
             <h1>Log in</h1>
