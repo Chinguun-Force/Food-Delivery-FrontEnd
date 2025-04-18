@@ -20,18 +20,18 @@ const getCategories = async () => {
 export const CategoriesList = async () => {
   // console.log(categories)
   // setCategories(categories);
-  const response = await axios.get(`${BASE_URL}/categories`);
-  const categories = await response.data.categories;
+  // const response = await axios.get(`${BASE_URL}/categories`);
+  // const categories = await response.data.categories;
   // console.log(categories)
   return (
     <div className="flex gap-2">
-      {categories.map((category: CategoryType) => (
+      {/* {categories.map((category: CategoryType) => (
         <Link key={category._id} href={"/" + category.categoryName}>
           <Badge className="rounded-full text-md" variant="outline">
             {category.categoryName}
           </Badge>
         </Link>
-      ))}
+      ))} */}
     </div>
   );
 };

@@ -27,13 +27,13 @@ const FoodList = () => {
   const [categories, setCategories] = useState([]);
 
   const getFoods = async () => {
-    const response = await fetch(`${BASE_URL}/categories/with-foods`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    // const response = await fetch(`${BASE_URL}/categories/with-foods`, {
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
 
-    const { categories } = await response.json();
+    // const { categories } = await response.json();
     console.log(categories);
     setCategories(categories);
   };
@@ -45,7 +45,7 @@ const FoodList = () => {
 
   return (
     <div>
-      {categories.map((category: CategoryType) => {
+      {/* {categories.map((category: CategoryType) => {
         return (
           <div key={category._id}>
             <p className="font-bold mt-4">{category.categoryName}</p>
@@ -77,7 +77,7 @@ const FoodList = () => {
             </div>
           </div>
         );
-      })}
+      })} */}
     </div>
   );
 };
